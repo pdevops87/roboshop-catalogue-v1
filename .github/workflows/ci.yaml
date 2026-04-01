@@ -19,6 +19,7 @@ jobs:
       - name: Run npm test
         run: echo npm test
    docker:
+    needs: test
     runs-on: self-hosted
     steps:
       - uses: actions/checkout@v4
