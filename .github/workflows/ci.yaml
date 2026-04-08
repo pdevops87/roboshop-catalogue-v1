@@ -36,9 +36,13 @@ jobs:
     steps:
       - uses: actions/checkout@v4
         with:
-        repository: https://github.com/pdevops87/roboshop-helm-v1
+        repository: pdevops87/roboshop-helm-v1
       - name: connect to kubernetes api through kubeconfig
-        run: echo aws eks update-kubeconfig --name dev
+        run:  aws eks update-kubeconfig --name dev
+      - name: deploy app
+        run: helm upgrade -i catalogue -f pass-values-templates/catalogue.yaml
+
+
 
 
 
