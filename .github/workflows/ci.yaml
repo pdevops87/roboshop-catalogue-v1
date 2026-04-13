@@ -38,9 +38,9 @@ jobs:
         with:
         repository: pdevops87/roboshop-helm-v1
       - name: connect to kubernetes api through kubeconfig
-        run:  aws eks update-kubeconfig --name dev
+        run:  echo aws eks update-kubeconfig --name dev
       - name: deploy app
-        run: helm upgrade -i catalogue -f pass-values-templates/catalogue.yaml
+        run: echo helm upgrade -i catalogue -f pass-values-templates/catalogue.yaml
 
 
 
