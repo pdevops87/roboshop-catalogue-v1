@@ -10,3 +10,4 @@ jobs:
     with:
       appName: catalogue
       apptype: node
+    secrets: inherit
