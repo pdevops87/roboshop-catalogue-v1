@@ -9,4 +9,4 @@ jobs:
     with:
       appName: catalogue
       apptype: node
-    secrets: inherit # <-- Must have a colon after 'secrets'
+    secrets: inherit 
